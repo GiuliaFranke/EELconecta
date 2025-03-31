@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
+<style>
+th {
+  font-size: 27px
+}
+h1 {
+  font-size: 45px;
+}
+td {
+  font-size: 25px;
+}
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo Engenharia Elétrica</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
+  
+<script>
+</script>
+
+</head>
+<body>
+<h1>Grade Curricular<br>Engenharia Elétrica - CTC/UFSC</h1>
+
+<div>
+  <table style="width:100%", class="tabela-espacada">  
+    <tr >
+      <th>1º fase</th>
+      <th>2º fase</th>
+      <th>3º fase</th>
+      <th>4º fase</th>
+      <th>5º fase</th>
+      <th>6º fase</th>
+      <th>7º fase</th>
+      <th>8º fase</th>
+      <th>9º fase</th>
+      <th>10º fase</th>
+    </tr>
+    
+    <tr><!--1 linha-->
+      <td><button id="EEL7011" onclick="carregarRecomendacoes('EEL7011')">EEL7011 (2)<br>Laboratório de Eletricidade Básica</button></td>
+      <td><button id="EGR5619" onclick="carregarRecomendacoes('EGR5619')">EGR5619 (4)<br>Desenho Técnico para Engenharia Elétrica</button></td>
+      <td><button id="ECZ5102" onclick="carregarRecomendacoes('ECZ5102')">ECZ5102 (2)<br>Conservação de Recursos Naturais</button></td>
+      <td><button id="EEL7030" onclick="carregarRecomendacoes('EEL7030')">EEL7030 (4)<br>Microprocessadores</button></td>
+      <td><button id="EEL7051" onclick="carregarRecomendacoes('EEL7051')">EEL7051 (4)<br>Materiais Elétricos</button></td>
+      <td><button id="DIR5998" onclick="carregarRecomendacoes('DIR5998')">DIR5998 (2)<br>Legislação e Ética em Engenharia Elétrica</button></td>
+      <td><button id="EEL7071" onclick="carregarRecomendacoes('EEL7071')">EEL7071 (4)<br>Introdução a Sistemas de Energia Elétrica</button></td>
+      <td><button id="EEL7080" onclick="carregarRecomendacoes('EEL7080')">EEL7080 (2)<br>Seminários de Engenharia Elétrica</button></td>
+      <td><button id="EEL7872" onclick="carregarRecomendacoes('EEL7872')">EEL7872 (20)<br>Estágio Curricular Longo</button></td>
+      <td><button id="EEL7890" onclick="carregarRecomendacoes('EEL7890')">EEL7890 (18)<br>Trabalho de Conclusão de Curso (TCC)</button></td>
+    </tr>
+  
+    <tr><!--2 linha-->
+        <td><button id="EEL7014" onclick="carregarRecomendacoes('EEL7014')">EEL7014 (2)<br>Introdução às Engenharias Elétrica e Eletrônica</button></td>
+        <td><button id="FSC5002" onclick="carregarRecomendacoes('FSC5002')">FSC5002 (4)<br>Física II</button></td>
+        <td><button id="EEL5105" onclick="carregarRecomendacoes('EEL5105')">EEL5105 (5)<br>Circuitos e Técnicas Digitais</button></td>
+        <td><button id="EEL7041" onclick="carregarRecomendacoes('EEL7041')">EEL7041 (4)<br>Eletromagnetismo</button></td>
+        <td><button id="EEL7052" onclick="carregarRecomendacoes('EEL7052')">EEL7052 (5)<br>Sistemas Lineares</button></td>
+        <td><button id="EEL7062" onclick="carregarRecomendacoes('EEL7062')">EEL7062 (5)<br>Princípios de Sistemas de Comunicação</button></td>
+        <td><button id="EEL7073" onclick="carregarRecomendacoes('EEL7073')">EEL7073 (4)<br>Conversão Eletromecânica de Energia B</button></td>
+        <td><button id="EEL7014" onclick="carregarRecomendacoes('EEL7014')">EEL7014 (2)<br>Aspectos de Segurança em Engenharia Elétrica</button></td>
+        <td><button id="EEL7889" onclick="carregarRecomendacoes('EEL7889')">EEL7889 (2)<br>Planejamento de Trabalho de Conclusão de Curso</button></td>
+    </tr>
+    
+    <tr><!--3 linha-->
+        <td><button id="FSC5101" onclick="carregarRecomendacoes('FSC5101')">FSC5101 (4)<br>Física I</button></td>
+        <td><button id="FSC5122" onclick="carregarRecomendacoes('FSC5122')">FSC5122 (3)<br>Física Experimental I</button></td>
+        <td><button id="EEL7013" onclick="carregarRecomendacoes('EEL7013')">EEL7013 (2)<br>Laboratório de Transdutores</button></td>
+        <td><button id="EEL7045" onclick="carregarRecomendacoes('EEL7045')">EEL7045 (6)<br>Circuitos Elétricos A</button></td>
+        <td><button id="EEL7053" onclick="carregarRecomendacoes('EEL7053')">EEL7053 (4)<br>Ondas Eletromagnéticas</button></td>
+        <td><button id="EEL7063" onclick="carregarRecomendacoes('EEL7063')">EEL7063 (6)<br>Sistemas de Controle (Teoria e Laboratório)</button></td>
+        <td><button id="EEL7074" onclick="carregarRecomendacoes('EEL7074')">EEL7074 (5)<br>Eletrônica de Potência I</button></td>
+        <td><button id="optativas" onclick="carregarRecomendacoes('-')">Disciplinas Optativas (20)</button></td>
+        <td><button id="optativas_prof" onclick="carregarRecomendacoes('-')">Disciplinas Optativas Profissionalizantes (4)</button></td>
+    </tr>
+    
+    <tr><!--4 linha-->
+        <td><button id="LLV7801" onclick="carregarRecomendacoes('LLV7801')">LLV7801 (4)<br>Produção Textual Acadêmica</button></td>
+        <td><button id="INE5201" onclick="carregarRecomendacoes('INE5201')">INE5201 (3)<br>Introdução à Ciência da Computação</button></td>
+        <td><button id="FSC5113" onclick="carregarRecomendacoes('FSC5113')">FSC5113 (4)<br>Física III</button></td>
+        <td><button id="EPS7019" onclick="carregarRecomendacoes('EPS7019')">EPS7019 (3)<br>Engenharia Econômica</button></td>
+        <td><button id="EEL7055" onclick="carregarRecomendacoes('EEL7055')">EEL7055 (6)<br>Circuitos Elétricos B</button></td>
+        <td><button id="EEL7064" onclick="carregarRecomendacoes('EEL7064')">EEL7064 (4)<br>Conversão Eletromecânica de Energia A</button></td>
+        <td><button id="EEL7300" onclick="carregarRecomendacoes('EEL7300')">EEL7300 (5)<br>Instrumentação Eletrônica</button></td>
+    </tr>
+    
+    <tr><!--5 linha-->
+        <td><button id="MTM3101" onclick="carregarRecomendacoes('MTM3101')">MTM3101 (4)<br>Cálculo 1</button></td>
+        <td><button id="MTM3102" onclick="carregarRecomendacoes('MTM3102')">MTM3102 (4)<br>Cálculo 2</button></td>
+        <td><button id="INE5118" onclick="carregarRecomendacoes('INE5118')">INE5118 (4)<br>Probabilidade Estatística e Processos Estocásticos</button></td>
+        <td><button id="FSC5114" onclick="carregarRecomendacoes('FSC5114')">FSC5114 (4)<br>Física IV</button></td>
+        <td><button id="EEL7061" onclick="carregarRecomendacoes('EEL7061')">EEL7061 (6)<br>Eletrônica I</button></td>
+        <td><button id="EEL7072" onclick="carregarRecomendacoes('EEL7072')">EEL7072 (4)<br>Projeto de Instalações Elétricas</button></td>
+        <td><button id="EMC5425" onclick="carregarRecomendacoes('EMC5425')">EMC5425 (4)<br>Fenômenos de Transportes</button></td>
+    </tr>
+    
+    <tr><!--6 linha-->
+        <td><button id="MTM3111" onclick="carregarRecomendacoes('MTM3111')">MTM3111 (4)<br>Geometria Analítica</button></td>
+        <td><button id="MTM3112" onclick="carregarRecomendacoes('MTM3112')">MTM3112 (4)<br>Álgebra Linear</button></td>
+        <td><button id="INE5202" onclick="carregarRecomendacoes('INE5202')">INE5202 (4)<br>Cálculo Numérico em Computadores</button></td>
+        <td><button id="MTM3104" onclick="carregarRecomendacoes('MTM3104')">MTM3104 (4)<br>Cálculo 4</button></td>
+        <td></td>
+        <td><button id="EEL7522" onclick="carregarRecomendacoes('EEL7522')">EEL7522 (4)<br>Processamento Digital de Sinais</button></td>
+        <td><button id="INE5407" onclick="carregarRecomendacoes('INE5407')">INE5407 (3)<br>Ciência, Tecnologia e Sociedade</button></td>
+    </tr>
+    
+    <tr><!--7 linha-->
+        <td><button id="QMC5125" onclick="carregarRecomendacoes('QMC5125')">QMC5125 (2)<br>Química Geral Experimental A</button></td>
+        <td></td>
+        <td><button id="MTM3103" onclick="carregarRecomendacoes('MTM3103')">MTM3103 (4)<br>Cálculo 3</button></td>
+    </tr>
+    
+    <tr><!--8 linha-->
+        <td><button id="QMC5138" onclick="carregarRecomendacoes('QMC5138')">QMC5138 (2)<br>Química Geral</button></td>
+    </tr>
+  
+  </table>
+</div>
+<script>
+  let selectedSubjects = [];
+  
+  async function carregarRecomendacoes(subject) {
+    try {
+      const button = document.getElementById(subject);
+      
+      // Toggle selection
+      if (selectedSubjects.includes(subject)) {
+          selectedSubjects = selectedSubjects.filter(s => s !== subject);
+          button.classList.remove('selected');
+      } else {
+          selectedSubjects.push(subject);
+          button.classList.add('selected');
+      }
+      
+      // Consulta a API
+      const response = await fetch('/api/check_subjects', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+              selected: selectedSubjects,
+              course: 'eletrica'
+          })
+      });
+      
+      const data = await response.json();
+      
+      // Atualiza as cores dos botões
+      document.querySelectorAll('button').forEach(btn => {
+          btn.classList.remove('available', 'blocked');
+          
+          if (data.available.includes(btn.id)) {
+              btn.classList.add('available');
+          } else if (!selectedSubjects.includes(btn.id)) {
+              btn.classList.add('blocked');
+          }
+      });
+    } catch (error) {
+        console.error("Erro ao verificar matérias:", error);
+    }
+}
+
+</script>
+</body>
+</html>
+

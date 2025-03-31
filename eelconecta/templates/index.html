@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
+  
+<style>
+button {
+  background-color: #F0CF11;
+  box-shadow: 5px 3px 3px rgb(185, 184, 184);
+  padding: 30px 45px; /*estilo do botão: arestas*/
+  font-size:25px;
+  border-radius: 10px;
+  
+}
+
+.welcome {
+    font-size: 35px;
+    color: black;
+    text-align:center;
+    margin: 10px 0;
+    padding: 0 20px; /* Espaço lateral para evitar que o texto toque as bordas */
+    line-height: 1.5; 
+}
+
+</style>
+
+</head>
+<body>
+  <h3></h3>
+  <div class="container">
+    <div class="box">
+      <img src="{{ url_for('static', filename='peteel-logo.png') }}">
+      <p class="welcome">Bem vindo(a) ao nosso currículo interativo! Para começar, escolha o curso desejado para explorar mais:</p>
+      <div id="botao">
+        <a href="{{ url_for('eletrica') }}"><button>ENGENHARIA ELÉTRICA</button></a>
+        <br>
+        <br>
+        <a href="{{ url_for('eletronica') }}"><button>ENGENHARIA ELETRÔNICA</button></a>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+<script>
+
+</script>
+
+</html>
