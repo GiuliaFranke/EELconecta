@@ -35,7 +35,7 @@ disciplinas_eletrica = {
     },
     "MTM3101": {
         "nome": "Cálculo 1",
-        "pre_requisitos": ["MTM3100"],
+        "pre_requisitos": [],
         "creditos": 4,
         "fase": 1
     },
@@ -247,23 +247,7 @@ disciplinas_eletrica = {
         "creditos": 4,
         "fase": 6
     },
-    "EEL7071": {
-        "nome": "Introdução a Sistemas de Energia Elétrica",
-        "pre_requisitos": ["EEL7053", "EEL7064", "INE5202"],
-        "creditos": 4,
-        "fase": 6
-    },
-    "EEL7073": {
-        "nome": "Conversão Eletromecânica de Energia B",
-        "pre_requisitos": ["EEL7064"],
-        "creditos": 4,
-        "fase": 6
-    },
-    "EEL7074": {
-        "nome": "Eletrônica de Potencia I ",
-        "pre_requisitos":["EEL7061"],
-        "creditos": 5,
-        "fase": 6     },
+
         # Fase 7
     "EEL7071": {
         "nome": "Introdução a Sistemas de Energia Elétrica",
@@ -328,11 +312,25 @@ disciplinas_eletrica = {
         "creditos": 10,
         "fase": 9
     },
+    "EEL7872": {
+        "nome": "Estágio Curricular Longo",
+        "pre_requisitos": [],
+        "creditos": 20,
+        "fase": 9
+    },
     "EEL7889": {
         "nome": "Planejamento do Trabalho de Conclusão de Curso",
         "pre_requisitos": ["EEL7080"],
         "creditos": 2,
         "fase": 9
+    },
+
+     # Fase 10
+    "EEL7890": {
+        "nome": "Trabalho de Conclusão de Curso (TCC)",
+        "pre_requisitos": ["EEL7889"],
+        "creditos": 18,
+        "fase": 10
     },
 
     # Optativas (fase padronizada para 8)
@@ -512,7 +510,7 @@ disciplinas_eletronica = {
     },
     "MTM3101": {
         "nome": "Cálculo 1",
-        "pre_requisitos": ["MTM3100"],
+        "pre_requisitos": [],
         "creditos": 4,
         "fase": 1
     },
@@ -574,6 +572,12 @@ disciplinas_eletronica = {
     },
 
     # Fase 3
+    "ECZ5102": {
+        "nome": "Conservação de Recursos Naturais",
+        "pre_requisitos": [],
+        "creditos": 2,
+        "fase": 3
+    },
     "EEL5105": {
         "nome": "Circuitos e Técnicas Digitais",
         "pre_requisitos": ["INE5201"],
@@ -630,6 +634,24 @@ disciplinas_eletronica = {
         "creditos": 6,
         "fase": 4
     },
+     "EPS7019": {
+        "nome": "Engenharia Econômica",
+        "pre_requisitos": [],
+        "creditos": 3,
+        "fase": 4
+    },
+    "FSC5114": {
+        "nome": "Física IV",
+        "pre_requisitos": ["FSC5002", "FSC5113"],
+        "creditos": 4,
+        "fase": 4
+    },
+    "MTM3104": {
+        "nome": "Cálculo 4",
+        "pre_requisitos": ["MTM3102"],
+        "creditos": 4,
+        "fase": 4
+    },
 
     # Fase 5
     "EEL7051": {
@@ -644,11 +666,35 @@ disciplinas_eletronica = {
         "creditos": 5,
         "fase": 5
     },
+     "EEL7053": {
+        "nome": "Ondas Eletromagnéticas",
+        "pre_requisitos": ["EEL7041", "EEL7045"],
+        "creditos": 4,
+        "fase": 5
+    },
+    "EEL7061": {
+        "nome": "Eletrônica I",
+        "pre_requisitos": ["EEL7045", "FSC5114"],
+        "creditos": 6,
+        "fase": 5
+    },
+    "EEL7801": {
+        "nome": "Projeto em Eletrônica I",
+        "pre_requisitos": ["EEL7013"],
+        "creditos": 3,
+        "fase": 5
+    },
+    "INE5406": {
+        "nome": "Sistemas Digitais",
+        "pre_requisitos": ["EEL5105"],
+        "creditos": 5,
+        "fase": 5
+    },
 
     # Fase 6
    "EEL7062": {
         "nome": "Princípios de Sistemas de Comunicação",
-        "pre_requisitos": ["EEL7052"],
+        "pre_requisitos": ["EEL7052", "INE5118"],
         "creditos": 5,
         "fase": 6
     },
@@ -712,7 +758,7 @@ disciplinas_eletronica = {
     # Fase 8
     "EEL7610": {
         "nome": "Tópico Especial em Gestão",
-        "pre_requisitos": [],
+        "pre_requisitos": ["EPS7019"],
         "creditos": 3,
         "fase": 8
     },
@@ -722,6 +768,12 @@ disciplinas_eletronica = {
         "nome": "Ante-Projeto TCC",
         "pre_requisitos": [],
         "creditos": 4,
+        "fase": 9
+    },
+    "INE5407": {
+        "nome": "Ciência, Tecnologia e Sociedade",
+        "pre_requisitos": [],
+        "creditos": 3,
         "fase": 9
     },
 
