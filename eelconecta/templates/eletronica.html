@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
 <style>
 th {
-  font-size: 27px
+  font-size:27px
 }
 h1 {
   font-size: 45px;
@@ -17,40 +17,37 @@ td {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currículo Engenharia Elétrica</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
-  
-<script>
-</script>
-
 </head>
-<body>
-<h1>Grade Curricular<br>Engenharia Elétrica - CTC/UFSC</h1>
 
-<div>
-  <table style="width:100%", class="tabela-espacada">  
-    <tr >
-      <th><input type="checkbox" onclick="carregarFase(1)"> 1º fase</th>
-      <th><input type="checkbox" onclick="carregarFase(2)"> 2º fase</th>
-      <th><input type="checkbox" onclick="carregarFase(3)"> 3º fase</th>
-      <th><input type="checkbox" onclick="carregarFase(4)"> 4º fase</th>
-      <th><input type="checkbox" onclick="carregarFase(5)"> 5º fase</th>
-      <th><input type="checkbox" onclick="carregarFase(6)"> 6º fase</th>
-      <th><input type="checkbox" onclick="carregarFase(7)"> 7º fase</th>
-      <th><input type="checkbox" onclick="carregarFase(8)"> 8º fase</th>
-      <th><input type="checkbox" onclick="carregarFase(9)"> 9º fase</th>
-      <th><input type="checkbox" onclick="carregarFase(10)"> 10º fase</th>
-    </tr>
-    
+<body>
+<h1>Grade Curricular<br>Engenharia Eletrônica - CTC/UFSC</h1>
+<table style="width:100%", class="tabela-espacada">  
+  <tr >
+    <th><input type="checkbox" onclick="carregarFase(1)"> 1º fase</th>
+    <th><input type="checkbox" onclick="carregarFase(2)"> 2º fase</th>
+    <th><input type="checkbox" onclick="carregarFase(3)"> 3º fase</th>
+    <th><input type="checkbox" onclick="carregarFase(4)"> 4º fase</th>
+    <th><input type="checkbox" onclick="carregarFase(5)"> 5º fase</th>
+    <th><input type="checkbox" onclick="carregarFase(6)"> 6º fase</th>
+    <th><input type="checkbox" onclick="carregarFase(7)"> 7º fase</th>
+    <th><input type="checkbox" onclick="carregarFase(8)"> 8º fase</th>
+    <th><input type="checkbox" onclick="carregarFase(9)"> 9º fase</th>
+    <th><input type="checkbox" onclick="carregarFase(10)"> 10º fase</th>
+  </tr>
+  
+  <tr><!--1 linha-->
+
     <tr><!--1 linha-->
       <td><button id="EEL7011" data-fase="1" onclick="carregarRecomendacoes('EEL7011')">EEL7011 (2)<br>Laboratório de Eletricidade Básica</button></td>
       <td><button id="EGR5619" data-fase="2" onclick="carregarRecomendacoes('EGR5619')">EGR5619 (4)<br>Desenho Técnico para Engenharia Elétrica</button></td>
       <td><button id="ECZ5102" data-fase="3" onclick="carregarRecomendacoes('ECZ5102')">ECZ5102 (2)<br>Conservação de Recursos Naturais</button></td>
       <td><button id="EEL7030" data-fase="4" onclick="carregarRecomendacoes('EEL7030')">EEL7030 (4)<br>Microprocessadores</button></td>
       <td><button id="EEL7051" data-fase="5" onclick="carregarRecomendacoes('EEL7051')">EEL7051 (4)<br>Materiais Elétricos</button></td>
-      <td><button id="DIR5998" data-fase="6" onclick="carregarRecomendacoes('DIR5998')">DIR5998 (2)<br>Legislação e Ética em Engenharia Elétrica</button></td>
-      <td><button id="EEL7071" data-fase="7" onclick="carregarRecomendacoes('EEL7071')">EEL7071 (4)<br>Introdução a Sistemas de Energia Elétrica</button></td>
-      <td><button id="EEL7080" data-fase="8" onclick="carregarRecomendacoes('EEL7080')">EEL7080 (2)<br>Seminários de Engenharia Elétrica</button></td>
-      <td><button id="EEL7872" data-fase="9" onclick="carregarRecomendacoes('EEL7872')">EEL7872 (20)<br>Estágio Curricular Longo</button></td>
-      <td><button id="EEL7890" data-fase="10" onclick="carregarRecomendacoes('EEL7890')">EEL7890 (18)<br>Trabalho de Conclusão de Curso (TCC)</button></td>
+      <td><button id="EEL7062" data-fase="6" onclick="carregarRecomendacoes('EEL7062')">EEL7062 (5)<br>Princípios de Sistemas de Comunicação</button></td>
+      <td><button id="EEL7319" data-fase="7" onclick="carregarRecomendacoes('EEL7319')">EEL7319 (4)<br>Circuitos RF</button></td>
+      <td><button id="EEL7610" data-fase="8" onclick="carregarRecomendacoes('EEL7610')">EEL7610 (3)<br>Tópico Especial em Gestão</button></td>
+      <td><button id="EEL7805" data-fase="9" onclick="carregarRecomendacoes('EEL7805')">EEL7805 (4)<br>Ante-Projeto TCC</button></td>
+      <td><button id="EEL7806" data-fase="10" onclick="carregarRecomendacoes('EEL7806')">EEL7806 (16)<br>Projeto Final TCC</button></td>
     </tr>
     
     <tr><!--2 linha-->
@@ -59,10 +56,10 @@ td {
       <td><button id="EEL5105" data-fase="3" onclick="carregarRecomendacoes('EEL5105')">EEL5105 (5)<br>Circuitos e Técnicas Digitais</button></td>
       <td><button id="EEL7041" data-fase="4" onclick="carregarRecomendacoes('EEL7041')">EEL7041 (4)<br>Eletromagnetismo</button></td>
       <td><button id="EEL7052" data-fase="5" onclick="carregarRecomendacoes('EEL7052')">EEL7052 (5)<br>Sistemas Lineares</button></td>
-      <td><button id="EEL7062" data-fase="6" onclick="carregarRecomendacoes('EEL7062')">EEL7062 (5)<br>Princípios de Sistemas de Comunicação</button></td>
-      <td><button id="EEL7073" data-fase="7" onclick="carregarRecomendacoes('EEL7073')">EEL7073 (4)<br>Conversão Eletromecânica de Energia B</button></td>
-      <td><button id="EEL7081" data-fase="8" onclick="carregarRecomendacoes('EEL7081')">EEL7081 (2)<br>Aspectos de Segurança em Engenharia Elétrica</button></td>
-      <td><button id="EEL7889" data-fase="9" onclick="carregarRecomendacoes('EEL7889')">EEL7889 (2)<br>Planejamento de Trabalho de Conclusão de Curso</button></td>
+      <td><button id="EEL7303" data-fase="6" onclick="carregarRecomendacoes('EEL7303')">EEL7303 (5)<br>Circuitos Eletrônicos Analógicos</button></td>
+      <td><button id="EEL7322" data-fase="7" onclick="carregarRecomendacoes('EEL7322')">EEL7322 (4)<br>Dispositivos Eletrônico</button></td>
+      <td><button id="opt_livre" data-fase="8" onclick="carregarRecomendacoes('opt_livre')">Optativa Livre (4)</button></td>
+      <td><button id="INE5407" data-fase="9" onclick="carregarRecomendacoes('INE5407')">INE5407 (3)<br>Ciência, Tecnologia e Sociedade</button></td>
     </tr>
     
     <tr><!--3 linha-->
@@ -71,10 +68,10 @@ td {
       <td><button id="EEL7013" data-fase="3" onclick="carregarRecomendacoes('EEL7013')">EEL7013 (2)<br>Laboratório de Transdutores</button></td>
       <td><button id="EEL7045" data-fase="4" onclick="carregarRecomendacoes('EEL7045')">EEL7045 (6)<br>Circuitos Elétricos A</button></td>
       <td><button id="EEL7053" data-fase="5" onclick="carregarRecomendacoes('EEL7053')">EEL7053 (4)<br>Ondas Eletromagnéticas</button></td>
-      <td><button id="EEL7063" data-fase="6" onclick="carregarRecomendacoes('EEL7063')">EEL7063 (6)<br>Sistemas de Controle (Teoria e Laboratório)</button></td>
-      <td><button id="EEL7074" data-fase="7" onclick="carregarRecomendacoes('EEL7074')">EEL7074 (5)<br>Eletrônica de Potência I</button></td>
-      <td><button id="optativas" data-fase="8" onclick="carregarRecomendacoes('optativas')">Disciplinas Optativas (20)</button></td>
-      <td><button id="optativas_prof" data-fase="9" onclick="carregarRecomendacoes('optativas_prof')">Disciplinas Optativas Profissionalizantes (4)</button></td>
+      <td><button id="EEL7522" data-fase="6" onclick="carregarRecomendacoes('EEL7522')">EEL7522 (5)<br>Processamento Digital de Sinais</button></td>
+      <td><button id="EEL7074" data-fase="7" onclick="carregarRecomendacoes('EEL7074')">EEL7074 (5)<br>Fundamentos de Comunicação Digital</button></td>
+      <td><button id="opt_prof1" data-fase="8" onclick="carregarRecomendacoes('opt_prof1')">Optativas Profissionalizantes (16)</button></td>
+      <td><button id="opt_prof2" data-fase="9" onclick="carregarRecomendacoes('opt_prof2')">Optativas Profissionalizantes (12)</button></td>
     </tr>
     
     <tr><!--4 linha-->
@@ -82,9 +79,11 @@ td {
       <td><button id="INE5201" data-fase="2" onclick="carregarRecomendacoes('INE5201')">INE5201 (3)<br>Introdução à Ciência da Computação</button></td>
       <td><button id="FSC5113" data-fase="3" onclick="carregarRecomendacoes('FSC5113')">FSC5113 (4)<br>Física III</button></td>
       <td><button id="EPS7019" data-fase="4" onclick="carregarRecomendacoes('EPS7019')">EPS7019 (3)<br>Engenharia Econômica</button></td>
-      <td><button id="EEL7055" data-fase="5" onclick="carregarRecomendacoes('EEL7055')">EEL7055 (6)<br>Circuitos Elétricos B</button></td>
-      <td><button id="EEL7064" data-fase="6" onclick="carregarRecomendacoes('EEL7064')">EEL7064 (4)<br>Conversão Eletromecânica de Energia A</button></td>
-      <td><button id="EEL7300" data-fase="7" onclick="carregarRecomendacoes('EEL7300')">EEL7300 (5)<br>Instrumentação Eletrônica</button></td>
+      <td><button id="EEL7061" data-fase="5" onclick="carregarRecomendacoes('EEL7061')">EEL7061 (6)<br>Eletrônica I</button></td>
+      <td><button id="FSC5506" data-fase="6" onclick="carregarRecomendacoes('FSC5506')">FSC5506 (6)<br>Estrutura da Matéria I</button></td>
+      <td><button id="EEL7802" data-fase="7" onclick="carregarRecomendacoes('EEL7802')">EEL7802 (3)<br>Projeto em Eletrônica II</button></td>
+      <td></td>
+      <td><button id="opt_livre2" data-fase="9" onclick="carregarRecomendacoes('opt_livre2')">Optativa Livre (4)</button></td>
     </tr>
     
     <tr><!--5 linha-->
@@ -92,9 +91,9 @@ td {
       <td><button id="MTM3102" data-fase="2" onclick="carregarRecomendacoes('MTM3102')">MTM3102 (4)<br>Cálculo 2</button></td>
       <td><button id="INE5118" data-fase="3" onclick="carregarRecomendacoes('INE5118')">INE5118 (4)<br>Probabilidade Estatística e Processos Estocásticos</button></td>
       <td><button id="FSC5114" data-fase="4" onclick="carregarRecomendacoes('FSC5114')">FSC5114 (4)<br>Física IV</button></td>
-      <td><button id="EEL7061" data-fase="5" onclick="carregarRecomendacoes('EEL7061')">EEL7061 (6)<br>Eletrônica I</button></td>
-      <td><button id="EEL7072" data-fase="6" onclick="carregarRecomendacoes('EEL7072')">EEL7072 (4)<br>Projeto de Instalações Elétricas</button></td>
-      <td><button id="EMC5425" data-fase="7" onclick="carregarRecomendacoes('EMC5425')">EMC5425 (4)<br>Fenômenos de Transportes</button></td>
+      <td><button id="EEL7801" data-fase="5" onclick="carregarRecomendacoes('EEL7801')">EEL7801 (3)<br>Projeto em Eletrônica I</button></td>
+      <td><button id="INE5411" data-fase="6" onclick="carregarRecomendacoes('INE5411')">INE5411 (6)<br>Organização de Computadores I</button></td>
+      <td><button id="EEL7885" data-fase="7" onclick="carregarRecomendacoes('EEL7885')">EEL7885 (4)<br>Fundamentos de Engenharia Biomédica</button></td>
     </tr>
     
     <tr><!--6 linha-->
@@ -102,9 +101,9 @@ td {
       <td><button id="MTM3112" data-fase="2" onclick="carregarRecomendacoes('MTM3112')">MTM3112 (4)<br>Álgebra Linear</button></td>
       <td><button id="INE5202" data-fase="3" onclick="carregarRecomendacoes('INE5202')">INE5202 (4)<br>Cálculo Numérico em Computadores</button></td>
       <td><button id="MTM3104" data-fase="4" onclick="carregarRecomendacoes('MTM3104')">MTM3104 (4)<br>Cálculo 4</button></td>
+      <td><button id="INE5406" data-fase="5" onclick="carregarRecomendacoes('INE5406')">INE5406 (5)<br>Sistemas Digitais</button></td>
       <td></td>
-      <td><button id="EEL7522" data-fase="6" onclick="carregarRecomendacoes('EEL7522')">EEL7522 (4)<br>Processamento Digital de Sinais</button></td>
-      <td><button id="INE5407" data-fase="7" onclick="carregarRecomendacoes('INE5407')">INE5407 (3)<br>Ciência, Tecnologia e Sociedade</button></td>
+      <td><button id="opt_prof3" data-fase="7" onclick="carregarRecomendacoes('opt_prof3')">Optativas Profissionalizantes</button></td>
     </tr>
     
     <tr><!--7 linha-->
@@ -120,52 +119,51 @@ td {
     <tr><!--9 linha-->
       <td><button id="QMC5138" data-fase="1" onclick="carregarRecomendacoes('QMC5138')">QMC5138 (2)<br>Química Geral</button></td>
     </tr>
-  
-  </table>
-</div>
+</table>
+
 <script>
-  let selectedSubjects = [];
-  
-  async function carregarRecomendacoes(subject) {
-    try {
-      const button = document.getElementById(subject);
-      
-      // Toggle selection
-      if (selectedSubjects.includes(subject)) {
-          selectedSubjects = selectedSubjects.filter(s => s !== subject);
-          button.classList.remove('selected');
-      } else {
-          selectedSubjects.push(subject);
-          button.classList.add('selected');
-      }
-      
-      // Consulta a API
-      const response = await fetch('/api/check_subjects', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-              selected: selectedSubjects,
-              course: 'eletrica'
-          })
-      });
-      
-      const data = await response.json();
-      
-      // Atualiza as cores dos botões
-      document.querySelectorAll('button').forEach(btn => {
-          btn.classList.remove('available', 'blocked');
-          
-          if (data.available.includes(btn.id)) {
-              btn.classList.add('available');
-          } else if (!selectedSubjects.includes(btn.id)) {
-              btn.classList.add('blocked');
-          }
-      });
-    } catch (error) {
-        console.error("Erro ao verificar matérias:", error);
+let selectedSubjects = [];
+
+async function carregarRecomendacoes(subject) {
+  try {
+    const button = document.getElementById(subject);
+    
+    // Toggle selection
+    if (selectedSubjects.includes(subject)) {
+        selectedSubjects = selectedSubjects.filter(s => s !== subject);
+        button.classList.remove('selected');
+    } else {
+        selectedSubjects.push(subject);
+        button.classList.add('selected');
     }
+    
+    // Consulta a API
+    const response = await fetch('/api/check_subjects', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            selected: selectedSubjects,
+            course: 'eletronica'
+        })
+    });
+    
+    const data = await response.json();
+    
+    // Atualiza as cores dos botões
+    document.querySelectorAll('button').forEach(btn => {
+        btn.classList.remove('available', 'blocked');
+        
+        if (data.available.includes(btn.id)) {
+            btn.classList.add('available');
+        } else if (!selectedSubjects.includes(btn.id)) {
+            btn.classList.add('blocked');
+        }
+    });
+  } catch (error) {
+      console.error("Erro ao verificar matérias:", error);
+  }
 }
 
 function carregarFase(numFase) {
