@@ -1,5 +1,3 @@
-import math
-
 # dicionário completo de disciplinas
 disciplinas_eletrica = {
     # Fase 1
@@ -786,19 +784,15 @@ disciplinas_eletronica = {
     }
 }
 
-
-escolha_de_curso = 1 #Variavel que tem seu valor definido quando o estudante escolhe o curso la no HTML ENTRE 1 E DOIS VER A PROXIMA LINHA)
-
-if escolha_de_curso == 1:
-    disciplinas = disciplinas_eletrica
-elif escolha_de_curso == 2:
-    disciplinas = disciplinas_eletronica
-
-
 #Essa função calcula quais disciplinas o estudante pode cursar no estado atual (As que serão pintadas de verde)
-def disponiveis(subjects_completed):
+def disponiveis(subjects_completed, course):
     # Disciplinas liberadas
     subjects_released = list()
+
+    if course == 'eletrica':
+        disciplinas = disciplinas_eletrica
+    else:
+        disciplinas = disciplinas_eletronica
 
     # Lista para armazenar disciplinas que têm "check" como pré-requisito e os pré-requisitos restantes
     contained = []
@@ -832,11 +826,9 @@ def disponiveis(subjects_completed):
             subjects_released.append(c)
     
     return(subjects_released)
-    
-
 
 #Essa função cria a melhor tragetória de disciplinas (As que serão pintadas de vermelho)
-def recomendacao(subjects_released):
+def recomendacao(subjects_released, course):
     #passo a passo
     # 1 -> Asumir uma dsciplina candidata
     # 2 -> Verificar todas as disiplinas do discionario com a condição de ter como prérequisito a disciplina candidata
@@ -847,9 +839,14 @@ def recomendacao(subjects_released):
     # 7 -> Assume outra disiciplina (return ->1)
     # ** NOTE delta f jamais sera negativo pois se uma disiplina exige a disciplina candidata como pré requisito ela jamais estara tera uma fase menor que F0 
 
-       
+    
     dis_liberadas = subjects_released  # Disciplinas que podem ser cursadas
     status = {}  # Dicionário para armazenar informações sobre cada disciplina liberada
+
+    if course == 'eletrica':
+        disciplinas = disciplinas_eletrica
+    else:
+        disciplinas = disciplinas_eletronica
 
     def f_teta(f1, f0, n):
         """
@@ -926,12 +923,3 @@ def recomendacao(subjects_released):
         print(f"{d} - {disciplinas[d]['nome']} ({disciplinas[d]['creditos']} créditos)")
 
     return selecionadas  # Retorna a lista de disciplinas escolhidas
-
-#As que ja foram concluidas
-estado_atual = []
-
-#As que podem ser cursada
-liberadas_para_cursar = disponiveis(estado_atual)
-
-#As mais indicadas para se cursar no momento
-recomendacao(liberadas_para_cursar)
