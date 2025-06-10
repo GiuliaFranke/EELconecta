@@ -1,8 +1,7 @@
-#criar as rotas do nosso site
-
 from flask import render_template, url_for, request, jsonify
 from eelconecta import app
-from eelconecta.materias import disciplinas_eletrica, disciplinas_eletronica, disponiveis, recomendacao
+from eelconecta.recomendadas import recomendacao
+from eelconecta.disciplinas_disponiveis import disponiveis
 
 #caminho dos links
 @app.route('/')
@@ -23,13 +22,10 @@ def check_subjects():
     selected = data.get('selected', [])
     course = data.get('course', 'eletrica')
     
-    # Seleciona o dicionário correto de disciplinas
-    disciplinas = disciplinas_eletrica if course == 'eletrica' else disciplinas_eletronica
-    
-    # Calcula disciplinas disponíveis
-    available = disponiveis(selected)
+    available = disponiveis(selected, course)
+    recommended = recomendacao(available, course)
     
     return jsonify({
         'available': available,
-        'recommended': recomendacao(available)
+        'recommended': recommended
     })
