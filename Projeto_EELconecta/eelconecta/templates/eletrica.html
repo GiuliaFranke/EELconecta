@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
+  <style>
+    th { font-size: 27px; }
+    
+    td { font-size: 25px; }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo Engenharia Elétrica</title>
+</head>
+<body>
+  
+  
+<div class="container2">
+  <div class="box1">
+    <img src="{{ url_for('static', filename='logo site.png') }}" alt="Logo" class="logo-top-left">
+    <div class="title-text">
+    <h1>Grade Curricular<br></h1>
+    <h2>Engenharia Elétrica - CTC/UFSC</h2>
+    </div>
+  </div>
+  <div>
+    
+    <div class="slider-container">
+      <label for="slider">Valor: <span id="slider-value">15</span></label>
+      <input type="range" id="slider" min="15" max="27" step="1" value="15">
+    </div>
+
+    <div class="recomendacoes-container">
+      <button id="gerarRecomendacoes" onclick="gerarRecomendacoes()">Gerar Recomendações</button>
+    </div>
+
+    <table class="tabela-espacada">  
+      <tr>
+      
+        <th><input type="checkbox" onclick="carregarFase(1)"> 1º fase</th>
+        <th><input type="checkbox" onclick="carregarFase(2)"> 2º fase</th>
+        <th><input type="checkbox" onclick="carregarFase(3)"> 3º fase</th>
+        <th><input type="checkbox" onclick="carregarFase(4)"> 4º fase</th>
+        <th><input type="checkbox" onclick="carregarFase(5)"> 5º fase</th>
+        <th><input type="checkbox" onclick="carregarFase(6)"> 6º fase</th>
+        <th><input type="checkbox" onclick="carregarFase(7)"> 7º fase</th>
+        <th><input type="checkbox" onclick="carregarFase(8)"> 8º fase</th>
+        <th><input type="checkbox" onclick="carregarFase(9)"> 9º fase</th>
+        <th><input type="checkbox" onclick="carregarFase(10)"> 10º fase</th>
+      </tr>
+      <tr>
+        <td><button class="disciplina" id="EEL7011" data-fase="1" onclick="selecionarEDisparar('EEL7011')">
+          EEL7011 (2)<br>Laboratório de Eletricidade Básica</button></td>
+        <td><button class="disciplina" id="EGR5619" data-fase="2" onclick="selecionarEDisparar('EGR5619')">
+          EGR5619 (4)<br>Desenho Técnico para Engenharia Elétrica</button></td>
+        <td><button class="disciplina" id="ECZ5102" data-fase="3" onclick="selecionarEDisparar('ECZ5102')">
+          ECZ5102 (2)<br>Conservação de Recursos Naturais</button></td>
+        <td><button class="disciplina" id="EEL7030" data-fase="4" onclick="selecionarEDisparar('EEL7030')">
+          EEL7030 (4)<br>Microprocessadores</button></td>
+        <td><button class="disciplina" id="EEL7051" data-fase="5" onclick="selecionarEDisparar('EEL7051')">
+          EEL7051 (4)<br>Materiais Elétricos</button></td>
+        <td><button class="disciplina" id="DIR5998" data-fase="6" onclick="selecionarEDisparar('DIR5998')">
+          DIR5998 (2)<br>Legislação e Ética em Engenharia Elétrica</button></td>
+        <td><button class="disciplina" id="EEL7071" data-fase="7" onclick="selecionarEDisparar('EEL7071')">
+          EEL7071 (4)<br>Introdução a Sistemas de Energia Elétrica</button></td>
+        <td><button class="disciplina" id="EEL7080" data-fase="8" onclick="selecionarEDisparar('EEL7080')">
+          EEL7080 (2)<br>Seminários de Engenharia Elétrica</button></td>
+        <td><button class="disciplina" id="EEL7872" data-fase="9" onclick="selecionarEDisparar('EEL7872')">
+          EEL7872 (10)<br>Estágio Curricular Curto I</button></td>
+        <td><button class="disciplina" id="EEL7890" data-fase="10" onclick="selecionarEDisparar('EEL7890')">
+          EEL7890 (18)<br>Trabalho de Conclusão de Curso (TCC)</button></td>
+      </tr>
+      <tr>
+        <td><button class="disciplina" id="EEL7014" data-fase="1" onclick="selecionarEDisparar('EEL7014')">
+          EEL7014 (2)<br>Introdução às Engenharias Elétrica e Eletrônica</button></td>
+        <td><button class="disciplina" id="FSC5002" data-fase="2" onclick="selecionarEDisparar('FSC5002')">
+          FSC5002 (4)<br>Física II</button></td>
+        <td><button class="disciplina" id="EEL5105" data-fase="3" onclick="selecionarEDisparar('EEL5105')">
+          EEL5105 (5)<br>Circuitos e Técnicas Digitais</button></td>
+        <td><button class="disciplina" id="EEL7041" data-fase="4" onclick="selecionarEDisparar('EEL7041')">
+          EEL7041 (4)<br>Eletromagnetismo</button></td>
+        <td><button class="disciplina" id="EEL7052" data-fase="5" onclick="selecionarEDisparar('EEL7052')"
+          >EEL7052 (5)<br>Sistemas Lineares</button></td>
+        <td><button class="disciplina" id="EEL7062" data-fase="6" onclick="selecionarEDisparar('EEL7062')">
+          EEL7062 (5)<br>Princípios de Sistemas de Comunicação</button></td>
+        <td><button class="disciplina" id="EEL7073" data-fase="7" onclick="selecionarEDisparar('EEL7073')">
+          EEL7073 (4)<br>Conversão Eletromecânica de Energia B</button></td>
+        <td><button class="disciplina" id="EEL7081" data-fase="8" onclick="selecionarEDisparar('EEL7081')">
+          EEL7081 (2)<br>Aspectos de Segurança em Engenharia Elétrica</button></td>
+        <td><button class="disciplina" id="EEL7871" data-fase="9" onclick="selecionarEDisparar('EEL7871')">
+          EEL7871 (10)<br>Estágio Curricular Curto II</button></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button class="disciplina" id="FSC5101" data-fase="1" onclick="selecionarEDisparar('FSC5101')">
+          FSC5101 (4)<br>Física I</button></td>
+        <td><button class="disciplina" id="FSC5122" data-fase="2" onclick="selecionarEDisparar('FSC5122')">
+          FSC5122 (3)<br>Física Experimental I</button></td>
+        <td><button class="disciplina" id="EEL7013" data-fase="3" onclick="selecionarEDisparar('EEL7013')">
+          EEL7013 (2)<br>Laboratório de Transdutores</button></td>
+        <td><button class="disciplina" id="EEL7045" data-fase="4" onclick="selecionarEDisparar('EEL7045')">
+          EEL7045 (6)<br>Circuitos Elétricos A</button></td>
+        <td><button class="disciplina" id="EEL7053" data-fase="5" onclick="selecionarEDisparar('EEL7053')">
+          EEL7053 (4)<br>Ondas Eletromagnéticas</button></td>
+        <td><button class="disciplina" id="EEL7063" data-fase="6" onclick="selecionarEDisparar('EEL7063')">
+          EEL7063 (6)<br>Sistemas de Controle (Teoria e Laboratório)</button></td>
+        <td><button class="disciplina" id="EEL7074" data-fase="7" onclick="selecionarEDisparar('EEL7074')">
+          EEL7074 (5)<br>Eletrônica de Potência I</button></td>
+        <td><button class="disciplina" id="optativas" data-fase="8" onclick="selecionarEDisparar('optativas')">
+          Disciplinas Optativas (20)</button></td>
+        <td><button class="disciplina" id="EEL7872" data-fase="9" onclick="selecionarEDisparar('EEL7872')">
+          EEL7872 (20)<br>Estágio Curricular Longo</button></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button class="disciplina" id="LLV7801" data-fase="1" onclick="selecionarEDisparar('LLV7801')">
+          LLV7801 (4)<br>Produção Textual Acadêmica</button></td>
+        <td><button class="disciplina" id="INE5201" data-fase="2" onclick="selecionarEDisparar('INE5201')">
+          INE5201 (3)<br>Introdução à Ciência da Computação</button></td>
+        <td><button class="disciplina" id="FSC5113" data-fase="3" onclick="selecionarEDisparar('FSC5113')">
+          FSC5113 (4)<br>Física III</button></td>
+        <td><button class="disciplina" id="EPS7019" data-fase="4" onclick="selecionarEDisparar('EPS7019')">
+          EPS7019 (3)<br>Engenharia Econômica</button></td>
+        <td><button class="disciplina" id="EEL7055" data-fase="5" onclick="selecionarEDisparar('EEL7055')">
+          EEL7055 (6)<br>Circuitos Elétricos B</button></td>
+        <td><button class="disciplina" id="EEL7064" data-fase="6" onclick="selecionarEDisparar('EEL7064')">
+          EEL7064 (4)<br>Conversão Eletromecânica de Energia A</button></td>
+        <td><button class="disciplina" id="EEL7300" data-fase="7" onclick="selecionarEDisparar('EEL7300')">
+          EEL7300 (5)<br>Instrumentação Eletrônica</button></td>
+        <td></td>
+        <td><button class="disciplina" id="EEL7889" data-fase="9" onclick="selecionarEDisparar('EEL7889')"
+          >EEL7889 (2)<br>Planejamento de Trabalho de Conclusão de Curso</button></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button class="disciplina" id="MTM3100" data-fase="1" onclick="selecionarEDisparar('MTM3100')"
+          >MTM3100 (4)<br>Pré-Cálculo</button></td>
+        <td><button class="disciplina" id="MTM3102" data-fase="2" onclick="selecionarEDisparar('MTM3102')"
+          >MTM3102 (4)<br>Cálculo 2</button></td>
+        <td><button class="disciplina" id="INE5118" data-fase="3" onclick="selecionarEDisparar('INE5118')"
+          >INE5118 (4)<br>Probabilidade Estatística e Processos Estocásticos</button></td>
+        <td><button class="disciplina" id="FSC5114" data-fase="4" onclick="selecionarEDisparar('FSC5114')"
+          >FSC5114 (4)<br>Física IV</button></td>
+        <td><button class="disciplina" id="EEL7061" data-fase="5" onclick="selecionarEDisparar('EEL7061')"
+          >EEL7061 (6)<br>Eletrônica I</button></td>
+        <td><button class="disciplina" id="EEL7072" data-fase="6" onclick="selecionarEDisparar('EEL7072')"
+          >EEL7072 (4)<br>Projeto de Instalações Elétricas</button></td>
+        <td><button class="disciplina" id="EMC5425" data-fase="7" onclick="selecionarEDisparar('EMC5425')"
+          >EMC5425 (4)<br>Fenômenos de Transportes</button></td>
+        <td></td>
+        <td><button class="disciplina" id="optativas_prof" data-fase="9" onclick="selecionarEDisparar('optativas_prof')">
+          Disciplinas Optativas Profissionalizantes (4)</button></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button class="disciplina" id="MTM3101" data-fase="1" onclick="selecionarEDisparar('MTM3101')">
+          MTM3101 (4)<br>Cálculo 1</button></td>
+        <td><button class="disciplina" id="MTM3112" data-fase="2" onclick="selecionarEDisparar('MTM3112')">
+          MTM3112 (4)<br>Álgebra Linear</button></td>
+        <td><button class="disciplina" id="INE5202" data-fase="3" onclick="selecionarEDisparar('INE5202')">
+          INE5202 (4)<br>Cálculo Numérico em Computadores</button></td>
+        <td><button class="disciplina" id="MTM3104" data-fase="4" onclick="selecionarEDisparar('MTM3104')">
+          MTM3104 (4)<br>Cálculo 4</button></td>
+        <td></td>
+        <td><button class="disciplina" id="EEL7522" data-fase="6" onclick="selecionarEDisparar('EEL7522')">
+          EEL7522 (4)<br>Processamento Digital de Sinais</button></td>
+        <td><button class="disciplina" id="INE5407" data-fase="7" onclick="selecionarEDisparar('INE5407')">
+          INE5407 (3)<br>Ciência, Tecnologia e Sociedade</button></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button class="disciplina" id="MTM3111" data-fase="1" onclick="selecionarEDisparar('MTM3111')">
+          MTM3111 (4)<br>Geometria Analítica</button></td>
+        <td></td>
+        <td><button class="disciplina" id="MTM3103" data-fase="3" onclick="selecionarEDisparar('MTM3103')">
+          MTM3103 (4)<br>Cálculo 3</button></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button class="disciplina" id="QMC5125" data-fase="1" onclick="selecionarEDisparar('QMC5125')">
+          QMC5125 (2)<br>Química Geral Experimental A</button></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button class="disciplina" id="QMC5138" data-fase="1" onclick="selecionarEDisparar('QMC5138')">
+          QMC5138 (2)<br>Química Geral</button></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <div id="recomendacoes">
+      <h3>Recomendações</h3>
+      <ul id="lista-recomendacoes"></ul>
+    </div>
+   <div id="legend">
+      <div class="legenda-item">
+        <span class="cor concluida"></span> Concluída
+      </div>
+      <div class="legenda-item">
+        <span class="cor indisponivel"></span> Indisponível
+      </div>
+      <div class="legenda-item">
+        <span class="cor disponivel"></span> Disponível
+      </div>
+      <div class="legenda-item">
+        <span class="cor recomendada"></span> Recomendada para o próximo semestre
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+<div id="overlay-loading">
+  <div class="loader"></div>
+  <p>Gerando recomendações...</p>
+</div>
+
+<style>
+  #overlay-loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 1.2em;
+  }
+
+  .loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
+
+</body>
+</html>
